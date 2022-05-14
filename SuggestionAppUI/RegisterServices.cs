@@ -13,6 +13,6 @@ public static class RegisterServices
         builder.Services.AddSingleton<ICategoryData, MongoCategoryData>();
         builder.Services.AddSingleton<IStatusData, MongoStatusData>();
         builder.Services.AddSingleton<ISuggestionData, MongoSuggestionData>();
-        builder.Services.AddSingleton<IUserData, UserData>();
+        builder.Services.AddSingleton<IUserData, MongoUserData>();
     }
 }
