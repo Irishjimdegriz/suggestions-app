@@ -2,6 +2,6 @@
 
 public interface IStatusData
 {
-    Task<List<StatusModel>> GetAllCategory();
-    Task CreateCategory(StatusModel status);
+    Task<List<StatusModel>> GetAllStatuses();
+    Task CreateStatus(StatusModel status);
 }

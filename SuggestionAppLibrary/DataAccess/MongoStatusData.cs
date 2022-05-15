@@ -13,7 +13,7 @@ public class MongoStatusData : IStatusData
         _statuses = db.StatusCollection;
     }
 
-    public async Task<List<StatusModel>> GetAllCategory()
+    public async Task<List<StatusModel>> GetAllStatuses()
     {
         var output = _cache.Get<List<StatusModel>>(CacheName);
 
@@ -28,7 +28,7 @@ public class MongoStatusData : IStatusData
         return output;
     }
 
-    public Task CreateCategory(StatusModel status)
+    public Task CreateStatus(StatusModel status)
     {
         return _statuses.InsertOneAsync(status);
     }
