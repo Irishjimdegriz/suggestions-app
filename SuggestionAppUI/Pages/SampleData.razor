@@ -113,7 +113,8 @@ else
             Description = "This is a suggestion created by the sample generation data method",
             SuggestionStatus = statuses[3],
             UserVotes = votes,
-            OwnerNotes = "This is the mote for the status."
+            OwnerNotes = "This is the mote for the status.",
+            ApprovedForRelease = true
         };
 
         await suggestionData.CreateSuggestion(suggestion);
