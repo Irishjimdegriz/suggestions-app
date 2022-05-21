@@ -149,7 +149,7 @@
         if (isSortedByNew)
             output = output.OrderByDescending(s => s.DateCreated).ToList();
         else 
-            output = output.OrderByDescending(s => s.UserVotes)
+            output = output.OrderByDescending(s => s.UserVotes.Count)
                            .ThenByDescending(s => s.DateCreated).ToList();
 
         suggestions = output;
